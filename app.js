@@ -13,9 +13,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // MOUNT API ROUTE
-const movieRoutes = require("./routes/movie-Routes");
+const movieRoutes = require("./routes/movie-routes");
 app.use("/api", movieRoutes);
 
 // START SERVER
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
